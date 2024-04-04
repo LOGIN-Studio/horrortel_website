@@ -1,78 +1,136 @@
 <template>
-  <v-timeline side="end">
-    <v-timeline-item v-for="item in items" :key="item.id" :dot-color="item.color" size="small">
-      <v-alert :color="item.color" :icon="item.icon" :value="true">
-        Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire
-        principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.
-      </v-alert>
-    </v-timeline-item>
-  </v-timeline>
+  <div class="timeline-area">
+    <box-title title="Project Logs"></box-title>
+    <v-dialog v-model="dialog" height="auto">
+      <v-card v-show="dialog" width="80vw">
+        <v-btn
+          class="close-btn"
+          color="error"
+          icon="mdi mdi-close"
+          @click="dialog = false"
+        >
+        </v-btn>
+        <img
+          class="full-image"
+          :src="require(`@/assets/image/${enlargedImage}`)"
+        />
+      </v-card>
+    </v-dialog>
+    <v-timeline class="timeline" align="start" side="end">
+      <v-timeline-item
+        v-for="(item, i) in projectLog"
+        :key="i"
+        dot-color="#fff"
+        icon="mdi-math-log"
+        fill-dot
+      >
+        <v-card class="card">
+          <v-card-title class="card-title text-h6">
+            {{ item.date }}
+          </v-card-title>
+          <v-card-text class="bg-white text--primary">
+            <div v-if="item.images && item.images.length > 0">
+              <v-carousel
+                show-arrows="hover"
+                delimiter-icon="mdi-square"
+                height="400"
+                hide-delimiter-background
+                class="carousel"
+              >
+                <v-carousel-item
+                  v-for="(image, index) in item.images"
+                  :key="index"
+                  :src="require('@/assets/image/' + image)"
+                  cover
+                >
+                  <v-btn
+                    icon="mdi mdi-eye"
+                    size="x-small"
+                    class="view-full-image-btn"
+                    @click="viewFullImage(image)"
+                  >
+                  </v-btn>
+                </v-carousel-item>
+              </v-carousel>
+            </div>
+            <div class="log-content">{{ item.text }}</div>
+          </v-card-text>
+        </v-card>
+      </v-timeline-item>
+    </v-timeline>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import 'animate.css';
-import { projectLog } from '@/log_text/index';
+import { ref } from "vue";
+import { projectLog } from "@/assets/constant/log";
+import BoxTitle from "@/components/boxTitle.vue";
 
-const items = ref([
-  {
-    id: 1,
-    color: 'info',
-    icon: 'mdi-information',
-  },
-  {
-    id: 2,
-    color: 'error',
-    icon: 'mdi-alert-circle',
-  },
-]);
+const enlargedImage = ref<string | null>(null);
+const dialog = ref<boolean>(false);
+
+const viewFullImage = (image: string) => {
+  enlargedImage.value = image;
+  dialog.value = true;
+};
 </script>
 
 <style lang="scss" scoped>
-.timeline-container {
-  background-color: red;
-  height: 20000px;
+:deep(.close-btn) {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
-  padding: 40px 0;
+.timeline-area {
+  background-color: #534c46;
+  padding-top: 40px;
 
-  .timeline-item {
-    width: 100vw;
-    padding: 0 10vw;
-    height: 100px;
-    position: relative;
+  .timeline {
+    padding: 20px 40px;
 
-    .circle {
-      position: absolute;
-      width: 15px;
-      height: 15px;
-      border: white 3px solid;
-      border-radius: 50%;
-    }
-    .horizontal-line {
-      position: absolute;
-      background-color: white;
-      width: 130px;
-      height: 3px;
-      top: 9px;
-      left: calc(10vw + 21px);
+    :deep(.v-timeline-item__body) {
+      width: calc(100vw - 400px);
+      max-width: 1500px;
     }
 
-    .vertical-line {
-      position: absolute;
-      background-color: white;
-      width: 3px;
-      height: calc(100% - 19px);
-      top: 19px;
-      left: calc(10vw + 9px);
-    }
+    .card {
+      text-align: left;
 
-    .date {
-      color: rgba($color: #000, $alpha: 0.3);
-      position: absolute;
-      width: 200px;
-      height: calc(100% - 19px);
-      top: 19px;
-      left: calc(10vw + 80px);
+      .card-title {
+        background-color: #6d3729;
+        color: aliceblue;
+      }
+
+      .carousel {
+        margin-top: 10px;
+
+        :deep(.v-carousel__controls .v-icon) {
+          color: rgba(
+            $color: aliceblue,
+            $alpha: 0.8
+          ); /* Change the color to red */
+
+          &:hover {
+            color: rgba($color: white, $alpha: 1);
+          }
+        }
+      }
+
+      .view-full-image-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        // color: white;
+      }
+
+      .log-content {
+        margin-top: 10px;
+        font-size: 18px;
+        white-space: pre-wrap; /* 换行时保留空格和换行符 */
+        word-wrap: break-word; /* 长单词换行 */
+        line-height: 1.5;
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <video class="background-video" autoplay loop muted>
-      <source src="@/assets/videos/test.mp4" type="video/mp4" />
+      <source src="@/assets/videos/web_video.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
     <div class="content">
@@ -37,21 +37,23 @@ const showAlert = () => {
   .content {
     text-align: center;
     color: white;
-    margin-bottom: -35vh;
+    margin-bottom: -25vh;
     z-index: 2;
 
     .title {
-      font-size: 5rem;
-      background-color: rgba(0, 0, 0, 0.3); /* 半透明灰色背景 */
-      padding: 10px 20px;
+      font-family: 'peccatum';
+      font-size: 10rem;
+      // background-color: rgba(0, 0, 0, 0.3); /* 半透明灰色背景 */
       border-radius: 5px;
+      color: #7a0101ce;
+      line-height: 12rem;
     }
 
     button {
-      margin-top: 20px;
+      // margin-top: 20px;
       padding: 10px 20px;
-      background-color: #ff3333;
-      color: white;
+      background-color: #ff3333a6;
+      color: rgba(255, 255, 255, 0.719);
       border: none;
       border-radius: 5px;
       font-size: 2rem;
