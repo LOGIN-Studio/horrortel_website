@@ -26,12 +26,27 @@ export const projectLog: LogType[] = [
     images: [],
   },
   {
+    date: '2024-04-27',
+    text: `Implementing object interaction logic:
+    1. Implementing a Door Opening and Closing Script
+    2. Implementing a drawer fetch script
+    3. Implementing the Hiding Cabinet Script`,
+    images: ['log-6.png', 'log-7.png', 'log-8.png', 'log-9.png'],
+  },
+  {
     date: '2024-04-26',
     text: `Completed the external network connection features:
     1. Connection of players in two different network environments
     2. Synchronization of newly generated objects
     3. Player state synchronization`,
     images: ['external_network_connection.png'],
+  },
+  {
+    date: '2024-04-19',
+    text: `Realisation of item detection:
+    1. Add a button to interact with the door
+    2. Implementation of door distance and direction detection scripts`,
+    images: ['log-4.png', 'log-5.png'],
   },
   {
     date: '2024-04-06',
