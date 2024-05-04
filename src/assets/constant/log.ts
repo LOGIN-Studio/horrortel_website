@@ -26,6 +26,14 @@ export const projectLog: LogType[] = [
     images: [],
   },
   {
+    date: '2024-04-26',
+    text: `Completed the external network connection features:
+    1. Connection of players in two different network environments
+    2. Synchronization of newly generated objects
+    3. Player state synchronization`,
+    images: ['external_network_connection.png'],
+  },
+  {
     date: '2024-04-06',
     text: `Monster Movement Design - First Draft
 1. Algorithm So Far: Determine the relationship between monster and player through dot product, and then make monster move towards player
@@ -49,10 +57,18 @@ Features in official website as follow:
     3. Team members`,
     images: ['log-1.png', 'log-2.png', 'log-3.png'],
   },
-    {
+  {
     date: '2024-03-31',
     text: `Complete basic map design. Try to use drunk crawling algorithm in map generation`,
     images: [],
+  },
+  {
+    date: '2024-03-25',
+    text: `Completion of the connection between the host and client in the local network environment:
+    1. The player Connection in local
+    2. Object synchronization
+    3. Player state synchronization`,
+    image: ['local_network_connection.png']
   },
   {
     date: '2024-03-21',
