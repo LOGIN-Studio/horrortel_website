@@ -30,7 +30,7 @@ export const projectLog: LogType[] = [
     text: `Monster Movement Design - First Draft
 1. Algorithm So Far: Determine the relationship between monster and player through dot product, and then make monster move towards player
 2. Change state when detect player`,
-    images: ['pby-log-1.png', 'pby-log-2.png', 'pby-log-3.png'],
+    images: [],
   },
     {
     date: '2024-04-02',
@@ -38,7 +38,7 @@ export const projectLog: LogType[] = [
 1. Initial game design proposal
 2. Simple click button to achieve movement
 3. Conceptual design of UI`,
-    images: [],
+    images: ['lzh-log-1.png', 'lzh-log-2.png', 'lzh-log-3.png', 'lzh-log-4.png'],
   },
   {
     date: '2024-04-01',
