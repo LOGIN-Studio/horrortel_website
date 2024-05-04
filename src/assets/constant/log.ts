@@ -17,13 +17,28 @@ export const projectLog: LogType[] = [
 3. Add a prompt system, which will prompt players when they operate improperly`,
     images: ['lzh-log-5.png', 'lzh-log-6.png'],
   },
+  {
+    date: '2024-04-28',
+    text: `Monster Movement Design - Second Draft
+1. Monster will be put randomly in the maze as game starts
+2. Every 5 turn points consumed by players, monster move for a distance
+3. Every time monster encounters a crossroad, randomly pick an available direction and move`,
+    images: [],
+  },
+  {
+    date: '2024-04-06',
+    text: `Monster Movement Design - First Draft
+1. Algorithm So Far: Determine the relationship between monster and player through dot product, and then make monster move towards player
+2. Change state when detect player`,
+    images: ['pby-log-1.png', 'pby-log-2.png', 'pby-log-3.png'],
+  },
     {
     date: '2024-04-02',
     text: `Completed game design and some player operations
 1. Initial game design proposal
 2. Simple click button to achieve movement
 3. Conceptual design of UI`,
-    images: ['lzh-log-1.png', 'lzh-log-2.png', 'lzh-log-3.png','lzh-log-4.png'],
+    images: [],
   },
   {
     date: '2024-04-01',
