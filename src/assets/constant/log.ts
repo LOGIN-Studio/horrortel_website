@@ -1,6 +1,14 @@
 import { LogType } from './log_type';
 
 export const projectLog: LogType[] = [
+        {
+    date: '2024-05-01',
+    text: `Improve player operation logic
+1. The button will be displayed based on the presence or absence of walls around it
+2. Added action point mechanism, randomly generating action points at the beginning of the turn, and consuming action points through actions
+3. Add a prompt system, which will prompt players when they operate improperly`,
+    images: ['lzh-log-5.png', 'lzh-log-6.png'],
+  },
     {
     date: '2024-04-02',
     text: `Completed game design and some player operations
