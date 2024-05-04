@@ -18,6 +18,11 @@ export const projectLog: LogType[] = [
     images: ['lzh-log-5.png', 'lzh-log-6.png'],
   },
   {
+    date: '2024-04-29',
+    text: `Automatic planning of motion animation paths in rooms using artificial intelligence techniques`,
+    images: [],
+  },
+  {
     date: '2024-04-28',
     text: `Monster Movement Design - Second Draft
 1. Monster will be put randomly in the maze as game starts
