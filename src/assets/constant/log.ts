@@ -6,7 +6,7 @@ export const projectLog: LogType[] = [
     text: `Complete basic room and map design
 1. Room and map would be placed at first. Some items would be changed later to connect interaction with players
 2. The design of character has been completed. In the next step it would be used in game
-3. Some basic texture has been used. About the other would be adjusted later`
+3. Some basic texture has been used. About the other would be adjusted later`,
     images: ['pby-log-1.png', 'pby-log-2.png', 'pby-log-3.png'],
   },
         {
