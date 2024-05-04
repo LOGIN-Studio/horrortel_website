@@ -2,6 +2,14 @@ import { LogType } from './log_type';
 
 export const projectLog: LogType[] = [
         {
+    date: '2024-05-03',
+    text: `Complete basic room and map design
+1. Room and map would be placed at first. Some items would be changed later to connect interaction with players
+2. The design of character has been completed. In the next step it would be used in game
+3. Some basic texture has been used. About the other would be adjusted later
+    images: ['pby-log-1.png', 'pby-log-2.png', 'pby-log-3.png'],
+  },
+        {
     date: '2024-05-01',
     text: `Improve player operation logic
 1. The button will be displayed based on the presence or absence of walls around it
