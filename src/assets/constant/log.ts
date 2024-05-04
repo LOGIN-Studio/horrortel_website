@@ -34,6 +34,11 @@ Features in official website as follow:
     3. Team members`,
     images: ['log-1.png', 'log-2.png', 'log-3.png'],
   },
+    {
+    date: '2024-03-31',
+    text: `Complete basic map design. Try to use drunk crawling algorithm in map generation`,
+    images: [],
+  },
   {
     date: '2024-03-21',
     text: `Try Plastic SCM in Unity-related operations`,
