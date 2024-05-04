@@ -68,7 +68,7 @@ Features in official website as follow:
     1. The player Connection in local
     2. Object synchronization
     3. Player state synchronization`,
-    image: ['local_network_connection.png']
+    images: ['local_network_connection.png']
   },
   {
     date: '2024-03-21',
